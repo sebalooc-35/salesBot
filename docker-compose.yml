@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  salesbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=your_openai_api_key_here
+    volumes:
+      - ./app:/app
